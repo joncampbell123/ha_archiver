@@ -360,6 +360,8 @@ int arc_adddir(void) {
     return 1;
 }
 
+int md_special(char *fullname, unsigned char **sdata);
+
 int arc_addspecial(char *fullname) {
 
     unsigned char *sdata;

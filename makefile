@@ -48,6 +48,10 @@ clean:
 	@for i in $(SUBDIRS); do (cd $$i && $(MAKE) clean) || exit; done
 	rm -f .depend ha *.out *~ *.o
 
+install:
+	mkdir -p $(DESTDIR)/usr/bin
+	cp -v ha $(DESTDIR)/usr/bin/
+
 #
 # include a dependency file if one exists
 #
